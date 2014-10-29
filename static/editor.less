@@ -77,7 +77,7 @@ atom-text-editor.react {
 
       .icon-right {
         padding: 0 .4em;
-        &:before {
+        &::before {
           text-align: center;
         }
       }
@@ -147,7 +147,7 @@ atom-text-editor .gutter .line-number .icon-right {
 atom-text-editor .gutter:hover .line-number.foldable .icon-right {
   visibility: visible;
 
-  &:before {
+  &::before {
     content: @chevron-down;
   }
 
@@ -161,7 +161,7 @@ atom-text-editor .gutter, atom-text-editor .gutter:hover {
     .octicon(chevron-right, 0.8em);
     visibility: visible;
 
-    &:before { // chevron-right renders too far right compared to chevron-down
+    &::before { // chevron-right renders too far right compared to chevron-down
       position: relative;
       left: -.1em;
       content: @chevron-right;
@@ -173,13 +173,13 @@ atom-text-editor .fold-marker {
   cursor: default;
 }
 
-atom-text-editor .fold-marker:after {
+atom-text-editor .fold-marker::after {
   .icon(0.8em, inline);
   content: @ellipsis;
   padding-left: 0.2em;
 }
 
-atom-text-editor .line.cursor-line .fold-marker:after {
+atom-text-editor .line.cursor-line .fold-marker::after {
   opacity: 1;
 }
 
