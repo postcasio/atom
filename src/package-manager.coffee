@@ -48,7 +48,7 @@ class PackageManager
   Section: Event Subscription
   ###
 
-  # Public: Invoke the given callback when all packages have been activated.
+  # Public: Invoke the given callback when all packages have been loaded.
   #
   # * `callback` {Function}
   #
@@ -83,7 +83,7 @@ class PackageManager
   # Return a {String} file path to apm.
   getApmPath: ->
     commandName = 'apm'
-    commandName += '.cmd' if process.platform is 'win32'
+    commandName += '.cmd' if process.platform is d'win32'
     @apmPath ?= path.resolve(__dirname, '..', 'apm', 'node_modules', 'atom-package-manager', 'bin', commandName)
 
   # Public: Get the paths being used to look for packages.
